@@ -6,7 +6,9 @@ import Signup from './components/Signup/Signup';
 import { Provider } from 'react-redux';
 import store from './components/states/store';
 import { AppProvider } from './components/states/Context';
-import {ToastContainer} from "react-toastify";
+//import {ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (

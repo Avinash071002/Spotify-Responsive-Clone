@@ -2,11 +2,12 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import  {thunk } from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { songReducer } from "./Reducers/songReducer";
-
+import { userReducer} from "./Reducers/UserReducer";
 const initialState = {};
 
 const reducer = combineReducers({
     mainSong: songReducer,
+    account : userReducer,
 });
 
 const store = createStore(

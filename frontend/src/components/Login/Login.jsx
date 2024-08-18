@@ -6,11 +6,13 @@ import { FaApple } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { userActor } from "../../states/Actors/UserActor";
+import { userActor } from '../states/Actors/UserActor';
 
 
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const { user, isAuthenticated } = useSelector((state) => state.account);
   const [userDetails, setUserDetails] = useState({
      username:'',
         password:'',
@@ -45,10 +47,8 @@ const Login = () => {
             } else {
               toast.error(data.message);  
                 }
-            }
-        
-        };
-       
+            };
+         
         const onChange = (e) =>{
 
           setUserDetails({...userDetails, [e.target.name]: e.target.value});
@@ -161,5 +161,6 @@ const Login = () => {
       </div>
     </>
   );
+}
 
 export default Login
