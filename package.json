@@ -1,6 +1,14 @@
 {
   "dependencies": {
-    "jsonwebtoken": "^9.0.2"
-    
+    "jsonwebtoken": "^9.0.2",
+    "react-scripts": "^5.0.1",
+    "postcss-safe-parser": "^6.0.0", 
+    "webpack": "^5.0.0"                
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",    
+    "test": "react-scripts test"       
   }
 }
+
